@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>성취기준 분석기 (2022 개정)</title>
+    <script>
+      // Workaround for environments/iframes where assigning to window.fetch directly throws a getter-only error
+      (function() {
+        try {
+          const origFetch = window.fetch;
+          if (origFetch) {
+            Object.defineProperty(window, 'fetch', {
+              configurable: true,
+              enumerable: true,
+              writable: true,
+              value: origFetch
+            });
+          }
+        } catch (e) {
+          console.warn('Could not patch window.fetch:', e);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
